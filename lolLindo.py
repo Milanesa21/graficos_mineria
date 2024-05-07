@@ -102,7 +102,7 @@ def update_graphs_callback(selected_region, n):
         dcc.Graph(figure=px.bar(data['top_campeones_kills'], x='champion', y='kills', title=f'Top 10 Campeones con Más Kills ({selected_region})', color='champion', color_discrete_sequence=color_sequence)),
         dcc.Graph(figure=px.bar(data['daño_objetivos_por_rol'], x='role', y='damage_objectives', title=f'Porcentaje de Daño a Objetivos por Rol ({selected_region})', color='role', color_discrete_sequence=color_sequence)),
         dcc.Graph(figure=px.pie(data['flash_usage'], values='cantidad', names='hechizo', title=f'Uso del Flash en D y F ({selected_region})')),
-        dcc.Graph(figure=px.bar(data['roles_mas_jugados'], x='role', y='cantidad', title=f'Distribución de Roles Más Jugados ({selected_region})', color='role', color_discrete_sequence=color_sequence)),
+        dcc.Graph(figure=px.pie(data['roles_mas_jugados'], values='cantidad', names='role', title=f'Distribución de Roles Más Jugados ({selected_region})', color='role', color_discrete_sequence=color_sequence)),
         dcc.Graph(figure=px.bar(data['campeones_victorias'], x='champion', y='victorias', title=f'Campeones con Más Victorias ({selected_region})', color='champion', color_discrete_sequence=color_sequence)),
         dcc.Graph(figure=px.bar(data['campeones_derrotas'], x='champion', y='derrotas', title=f'Campeones con Más Derrotas ({selected_region})', color='champion', color_discrete_sequence=color_sequence))
     ]
